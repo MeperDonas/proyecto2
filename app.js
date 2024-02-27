@@ -16,6 +16,7 @@ var mustacheExpress = require('mustache-express');
 var app = express();
 
 // view engine setup
+app.set('view engine', 'ejs');
 app.engine('mustache', mustacheExpress());
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'mustache');
