@@ -1,0 +1,33 @@
+version: "3.1"
+
+services:
+  db:
+    container_name: ecommerce-db
+    image: mariadb:11-jammy
+    restart: unless-stopped
+    volumes:
+      - ecommerce_db_data:/var/lib/mysql
+    environment:
+      - MARIADB_USER=ecommerce_user
+      - MARIADB_PASSWORD=Iv}dd#l{085?
+      - MARIADB_ROOT_PASSWORD=Iv}dd#l{085?
+      - MARIADB_DATABASE=ecommerce
+    ports:
+      - "3306:3306"
+  back:
+    container_name: ecommerce-back
+    restart: unless-stopped
+    depends_on:
+      - db
+    build:
+      context: ..
+      dockerfile: local/Dockerfile
+    volumes:
+      - ../:/app
+      - /app/node_modules
+    ports:
+      - "3000:3000"
+    stdin_open: true
+    tty: true
+volumes:
+  ecommerce_db_data: 
