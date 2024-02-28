@@ -68,7 +68,7 @@ router.get('/productos/eliminar/:productoid', async function (req, res, next) {
 //--------------------------------------------//
 
 
-// Funcion de llamar cartas
+// Funcion de llamar a mis cartas de lista de deseos
 router.get('/lista_deseos', authOnly, async function (req, res, next) {
   let conn;
   try {
@@ -90,7 +90,8 @@ router.get('/lista_deseos', authOnly, async function (req, res, next) {
 //------------------------------------------------------------------//
 
 
-// Funcion de eliminar carta
+// Funcion de eliminar de mi lista de deseos
+
 router.get('/lista_deseos/eliminar/:itemid', async function (req, res, next) {
   let conn;
   try {
