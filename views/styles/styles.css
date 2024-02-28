@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background-color: #304C8B;
+  }
+  
+  /* Estilos navbar */
+  header {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #18233F;
+    margin-right: 9%;
+  }
+  
+  header .logo_img{
+  width: 70px;
+  }
