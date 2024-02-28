@@ -34,7 +34,7 @@ router.get('/', authOnly, async function (req, res, next) {  //la funcion GET ha
 
 
 
-// Llamar usuario
+// Llamar usuario  autenticacion y establecer su informacion de sesion
 router.get('/auth', function (req, res, next) {
   req.session.regenerate(function () {
     req.session.user = {'name': 'santiago', 'id': 16};
@@ -46,7 +46,7 @@ router.get('/auth', function (req, res, next) {
 //----------------------------------------------------------//
 
 
-
+// Funcion de eliminar carta especifica en db y redirigir a la pagina principal
 router.get('/productos/eliminar/:productoid', async function (req, res, next) {
   let conn;
   try {
