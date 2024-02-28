@@ -10,34 +10,38 @@ const constants = require('./config/constants');
 var indexRouter = require('./routes/index');
 
 
-var mustacheExpress = require('mustache-express');
+
 
 
 var app = express();
 
-// view engine setup
-app.set('view engine', 'ejs');
-app.engine('mustache', mustacheExpress());
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'mustache');
 
+
+// configuracion del view engie
+app.set('view engine', 'ejs'); //EJS como motor de vista 
+app.set('views', path.join(__dirname, 'views')); // direcotorio de vistas
+
+// configuracion cosas estaticas
+app.use(express.static(path.join(__dirname, 'public'))); //directorio archivos estaticos
+
+
+// configuracion middleware de sesiones
 app.use(session({
-    resave: false, // don't save session if unmodified
-    saveUninitialized: false, // don't create session until something stored
+    resave: false, // no guardar si no se modifica
+    saveUninitialized: false, // no crea sesin hasta que algo almacene
     secret: 'shhhh, very secret'
 }));
 
-
+//configaron de middleware adicional para el registro, analisis de JSON, formularios y cookies
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
 
-
+// enrutador principal, todo lo que llegue a la raiz sera manejado por el indexRouter
 app.use('/', indexRouter);
 
-// catch 404 and forward to error handler
+// error 404 (no encontrado)
 app.use(function(req, res, next) {
   next(createError(404));
 });
@@ -47,4 +51,6 @@ app.listen(constants.PORT, () => {
   console.log(`Activo el puerto ${constants.PORT}`)
 })
 
+// script para importar
 module.exports = app;
+
