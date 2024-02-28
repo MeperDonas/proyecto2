@@ -1,23 +1,24 @@
-var express = require('express'); //importa el modulo express (que es el framework)
+var express = require('express'); // importa el modulo express (que es el framework)
 
-var session = require('express-session'); //importa el modulo de sesiones de express (es la gestion de sesioens de express)
+var session = require('express-session'); // importa el modulo de sesiones de express (es la gestion de sesioens de express)
 
-var createError = require('http-errors'); //importa el modulo para manejar las situaciones http-errores (error 404)
+var createError = require('http-errors'); // importa el modulo para manejar las situaciones http-errores (error 404)
 
-var path = require('path'); //
+var path = require('path'); // modulo que proporciona facilidad para trabajar con rutas de archivos y direcotrios
 
-var cookieParser = require('cookie-parser');
+var cookieParser = require('cookie-parser'); // importa el módulo cookie-parser, que se utiliza para analizar las cookies adjuntas a las solicitudes HTTP
 
-var logger = require('morgan');
-
-
-const constants = require('./config/constants');
-var indexRouter = require('./routes/index'); 
+var logger = require('morgan'); // importa el módulo morgan, que es un middleware de registro HTTP y registrar detalles de las solicitudes HTTP entrantes en la consola del servidor.
 
 
+const constants = require('./config/constants'); // importa el módulo morgan, que es un middleware de registro HTTP para registrar detalles de las solicitudes HTTP entrantes en la consola del servidor.
+
+var indexRouter = require('./routes/index'); // importa el enrutador principal (indexRouter) desde el archivo index.js ubicado en el directorio routes.
 
 
 
+
+//Nueva instancia para configurar y ejecutar aplicaciones
 var app = express();
 
 
