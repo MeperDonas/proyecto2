@@ -1,13 +1,18 @@
-var express = require('express');
-var session = require('express-session');
+var express = require('express'); //importa el modulo express (que es el framework)
 
-var createError = require('http-errors');
-var path = require('path');
+var session = require('express-session'); //importa el modulo de sesiones de express (es la gestion de sesioens de express)
+
+var createError = require('http-errors'); //importa el modulo para manejar las situaciones http-errores (error 404)
+
+var path = require('path'); //
+
 var cookieParser = require('cookie-parser');
+
 var logger = require('morgan');
 
+
 const constants = require('./config/constants');
-var indexRouter = require('./routes/index');
+var indexRouter = require('./routes/index'); 
 
 
 
