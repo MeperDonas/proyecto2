@@ -1,11 +1,14 @@
-var express = require('express');
+var express = require('express'); // importamos el modulo del framework usado
 
-const { authOnly } = require('../middleware/auth');
-const db = require('../db/database')
+const { authOnly } = require('../middleware/auth'); // importamos el middleware de la funcion authOnly (usuarios autenticados pueden acceder)
 
-var router = express.Router();
+const db = require('../db/database') // modulo usado para interactuar con la base de datos
+
+var router = express.Router(); // la instacia para los modulos de enrutamiento 
+
 
 //----------------------------------------------------------------------//
+
 
 // Llamar productos
 router.get('/', authOnly, async function (req, res, next) {
@@ -25,7 +28,9 @@ router.get('/', authOnly, async function (req, res, next) {
     }
 });
 
+
 //-----------------------------------------------------------//
+
 
 
 // Llamar usuario
@@ -36,7 +41,9 @@ router.get('/auth', function (req, res, next) {
   });
 });
 
+
 //----------------------------------------------------------//
+
 
 
 router.get('/productos/eliminar/:productoid', async function (req, res, next) {
@@ -56,7 +63,9 @@ router.get('/productos/eliminar/:productoid', async function (req, res, next) {
     }
 });
 
+
 //--------------------------------------------//
+
 
 // Funcion de llamar cartas
 router.get('/lista_deseos', authOnly, async function (req, res, next) {
@@ -76,7 +85,9 @@ router.get('/lista_deseos', authOnly, async function (req, res, next) {
     }
 });
 
+
 //------------------------------------------------------------------//
+
 
 // Funcion de eliminar carta
 router.get('/lista_deseos/eliminar/:itemid', async function (req, res, next) {
@@ -95,5 +106,6 @@ router.get('/lista_deseos/eliminar/:itemid', async function (req, res, next) {
   if (conn) return conn.end();
     }
 });
+
 
 module.exports = router;
