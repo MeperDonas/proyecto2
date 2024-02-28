@@ -31,6 +31,7 @@ app.set('views', path.join(__dirname, 'views')); // direcotorio de vistas
 app.use(express.static(path.join(__dirname, 'public'))); //directorio archivos estaticos
 
 
+
 // configuracion middleware de sesiones
 app.use(session({
     resave: false, // no guardar si no se modifica
