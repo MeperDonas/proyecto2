@@ -253,3 +253,289 @@ margin-bottom: 10px;
 cursor: pointer;
 border-radius: 7px;
 }
+
+
+/* ///////////////////////////////// */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/* Estilos navbar */
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #18233F;
+  margin-right: 9%;
+}
+
+header .logo_img{
+width: 70px;
+}
+
+#navbar {
+  height: 60px;
+  background-color: #18233F;
+}
+
+.opciones {
+  display: flex;
+  list-style: none;
+  padding-top: 9px;
+  gap: 2.2em;
+  margin-left: 10px;
+}
+
+.opciones li {
+  display: inline-block;
+  padding-top: 9px;
+}
+
+.opciones li a {
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+}
+
+.opciones li button {
+  font-size: 24px;
+  height: 90%;
+  width: 110px;
+  cursor: pointer;
+  margin-right: 1%;
+  border-radius: 10px;
+  border: none;
+  text-align: center;
+  margin-top: 2px;
+}
+
+.abrir-btn{
+  display: none;
+}
+
+.carrito{
+  margin-top: 1rem;
+  margin-left: 15rem;
+}
+
+h1{
+  font-size: 1.5rem;
+}
+
+.linea{
+  margin-right: 27rem;
+  border-color: #292023;
+  margin-top: 0.4rem;
+}
+
+.container_productos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between ;
+  margin-top: 20px;
+  font-size: 1px;
+  width: 60rem;
+  margin-left: 15rem
+}
+/* Carta */
+.card {
+  border: 1px solid #9e9e9e;
+  border-radius: 14px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  transition: transform 0.3s ease;
+  margin-bottom: 20px;
+  padding-bottom: 0px;
+}
+.card-new
+{
+  border: 1px solid #9e9e9e;
+  border-radius: 14px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  transition: transform 0.3s ease;
+  margin-bottom:20px;
+  background-color: #9e9e9ead;
+  cursor: pointer;
+  position: relative;
+}
+
+.card-new p
+{
+  color: rgba(0, 0, 0, 0.613);
+}
+
+.card-new .imagen_carta {
+  position: relative;
+}
+
+.card-new img
+{
+  opacity: 0.5;
+  position: relative;
+}
+
+
+.agregar
+{
+  height: 50px;
+  z-index: 1;
+  position: relative;
+  cursor: pointer;
+}
+
+
+.informacion_carta {
+  background-color: white;
+  padding-left: 5px;
+  border-radius: 0px 0px 14px 14px;
+}
+
+.informacion_carta p {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.informacion_carta .stats_card {
+  list-style: none;
+  margin-top: 5px;
+}
+
+.imagen_carta
+{
+  width: 210px; /* ajusta el ancho según tus necesidades */
+height: 155px; /* ajusta la altura según tus necesidades */
+overflow: hidden;
+}
+
+.personaje 
+{
+  width: 100%;
+height: auto;
+display: block;
+  border-radius: 13px 13px 0 0;
+}
+
+.rectangulo{
+  display: flex;
+  height: 2rem;
+  background-color: #9e9e9e;
+  border-radius: 0px 0px 14px 14px;
+  margin-left: -0.3rem;
+  margin-top: 1rem;
+  background-color: rgba(130, 125, 125, 0.4);
+}
+
+
+.cantidad{
+  background-color: #EBC793;
+  position: absolute;
+  border: 1px solid black;
+  display: flex;
+  width: 2.6rem;
+  justify-content: space-between;
+  margin-left: 2.7rem;
+  margin-top: 0.4rem;
+  padding-left: 4px;
+  padding-right: 4px;
+  
+}
+
+.valor{
+  margin-top: 0.4rem;
+  margin-left: 7rem;
+}
+
+.resumen{
+  border: 1px solid black;
+  background-color: white;
+  height: 17rem;
+  width: 18rem;
+  margin-top: -38rem;
+  margin-left: 83rem;
+  border-radius: 10px;
+}
+
+.compra{
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.7rem;
+  margin-left: 0.5rem;
+}
+
+.lineados{
+  margin-top: 1rem;
+  border-color: #292023;
+  margin-left: -0.5rem;
+}
+
+.productos{
+margin-top: 1rem;
+margin-left: 0.5rem;
+}
+
+.totalb{
+  margin-top: 19px;
+}
+
+.iva{
+  margin-top: 19px;
+}
+
+.lineatres{
+  margin-top: 1rem;
+  border-color: #292023;
+}
+
+.total{
+  margin-top: 1rem;
+  margin-left: 0.5rem;
+}
+
+.pedido{
+  border-radius: 10px;
+  background-color: #EBC793;
+  width: 9rem;
+  height: 1.8rem;
+  text-align: center;
+  margin-top: 2.6rem;
+  margin-left: 4.5rem;
+  padding-top: 10px;
+  border: 1px solid black;
+}
+
+.pedido:hover{
+background-color: #ddb77f;
+}
+
+.añadir{
+  margin-top: 0.3rem;
+  padding: 14px;
+  width: 15rem;
+  margin-left: -4rem;
+}
+
+.añadir:hover{
+  color: #789dca;
+}
+
+.paginas{
+  margin-top: -0.7rem;
+  display: flex;
+  width: 5rem;
+  justify-content: space-between;
+  margin-left: 70rem;
+  font-weight: bold;
+}
+
+.realizar{
+margin-top: -1rem;
+width: 9rem;
+height: 2.3rem;
+background: none;
+border: none;
+
+}
