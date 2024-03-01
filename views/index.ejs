@@ -10,7 +10,7 @@
   <!-- Header -->
   <header>
     <img src="images/logo.png" class="logo_img" alt="">
-      <!-- Barra de navegación -->
+    <!-- Barra de navegación -->
     <img src="images/hamburguesa_icon.svg" class="abrir-btn" alt="">
     <nav class="" id="navbar">
       <ul class="opciones">
@@ -25,158 +25,111 @@
       </ul>
     </nav>
   </header>
-
+  <!-- Vitrina de productos -->
   <main>
     <!-- filtros -->
     <div class="filtros">
       <h1>Filtros</h1>
       <form action="">
-      <ul class="tipo_filtros">
-        <!-- filtro precios -->
-        <li><h2>Precios</h2></li>
-        <li><select class="seleccionar_precio">
-          <option value="#" disabled selected>Precios</option>
-          <option value="Mayor>menor">Mayor a menor</option>
-          <option value="Menor>mayor">Menor a mayor</option>
-        </select></li>
-        <li class="rangos">
-          <p>Entre</p> <input type="number" name="rango_precio1" id="rango_precio1"> <p>y</p> <input type="number" name="rango_precio2" id="rango_precio2">
-        </li>
-<!-- Tipo de carta -->
-        <li><h2>Tipo de carta</h2></li>
-        <li><select class="tipo_carta">
-          <option value="#" disabled selected>Selecciona un tipo</option>
-          <option value="Guerrero Tanque">Guerrero Tanque</option>
-          <option value="Guerrero Armas">Guerrero Armas</option>
-          <option value="Mago fuego">Guerrero fuego</option>
-          <option value="Mago hielo">Guerrero hielo</option>
-          <option value="Picaro veneno">Picaro veneno</option>
-          <option value="Picaro machete">Picaro machete</option>
-        </select></li>
-        <!-- filtro promocion -->
-        <li>
-    <input type="checkbox" name="promociones" class="promociones" id="promociones" value="promociones">  <b>Promoción</b>
-      </li>
-      <input type="submit" id="filtro_input" value="Filtrar">
-      </ul>
-    </form>
-    </div>
+        <ul class="tipo_filtros">
+          <!-- filtro precios -->
+          <li>
+            <h2>Precios</h2>
+          </li>
+          <li><select class="seleccionar_precio">
+              <option value="#" disabled selected>Precios</soption>
+              <option value="desc">Mayor a menor</option>
+              <option value="asc">Menor a mayor</option>
+            </select></li>
 
-
-<!-- Cartas  -->       
+          <!-- Tipo de carta -->
+          <li>
+            <h2>Tipo de carta</h2>
+          </li>
+          <li><select class="tipo_carta">
+              <option value="#" disabled selected>Selecciona un tipo</option>
+              <option value="Guerrero Tanque">Guerrero Tanque</option>
+              <option value="Guerrero Armas">Guerrero Armas</option>
+              <option value="Mago fuego">Guerrero fuego</option>
+              <option value="Mago hielo">Guerrero hielo</option>
+              <option value="Picaro veneno">Picaro veneno</option>
+              <option value="Picaro machete">Picaro machete</option>
+            </select></li>
+          <!-- filtro promocion -->
+          <li>
+            <input type="checkbox" name="promociones" class="promociones" id="promociones" value="promociones"> <b>Promoción</b>
+          </li>
+          <input type="submit" id="filtro_input" value="Filtrar">
+        </ul>
+      </form>
     </div>
-    <div class="container_productos">
-    <div class="card">
-        <div class="imagen_carta">
+    <div class="container_general">
+      <!--Parte barra de búsqueda  -->
+      <div class="barra_busqueda">
+        <form action="" class="search_form">
+          <input type="text" class="search_input" placeholder="Ingresa tu búsqueda" maxlength="35">
+          <img src="images/search_icon.svg" alt="search_icon" class="search_icon">
+        </form>
+      </div>
+      <!-- CARTAS -->
+      <div class="container_productos">>
+        <div class="card">
+          <div class="imagen_carta">
             <img src="images/carta.png" class="personaje">
         </div>
         <div class="informacion_carta">
-            <p>Cedric Cogswell</p>
-            <p>Poder</p>
-            <p>Vida:</p>
-            <p>Defensa:</p>
-            <p>Ataque:</p>
-            <p>Daño:</p>
-    
-            <div class="rectangulo">
-                <div class="cantidad">
-                    <p>-</p>
-                    <p>1</p>
-                    <p>+</p>
-                </div>
-                <div class="valor">
-                    <p>$168.000</p>
-                </div>
-            </div>
+          <p>Cedric Cogswell</p>
+          <p>Poder</p>
+          <p>Vida:</p>
+          <p>Defensa:</p>
+          <p>Ataque:</p>
+          <p>Daño:</p>
+      
+              
+          <div class="rectangulo">
+            <div class="cantidad">
+                <p>-</p>
+                <p>1</p>
+                <p>+</p>
+              </div>
+              <div class="valor">
+                  <p>$168.000</p>
+              </div>
+              </div>
+          </div>
         </div>
-    </div>
-    <!-- /////////// -->
-    <div class="card">
-        <div class="imagen_carta">
-            <img src="images/carta.png" class="personaje">
-        </div>
-        <div class="informacion_carta">
-            <p>Cedric Cogswell</p>
-            <p>Poder</p>
-            <p>Vida:</p>
-            <p>Defensa:</p>
-            <p>Ataque:</p>
-            <p>Daño:</p>
-    
-            <div class="rectangulo">
-                <div class="cantidad">
-                    <p>-</p>
-                    <p>1</p>
-                    <p>+</p>
-                </div>
-                <div class="valor">
-                    <p>$168.000</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- ////////////// -->
-    <div class="card">
-        <div class="imagen_carta">
-            <img src="images/carta.png" class="personaje">
-        </div>
-        <div class="informacion_carta">
-            <p>Cedric Cogswell</p>
-            <p>Poder</p>
-            <p>Vida:</p>
-            <p>Defensa:</p>
-            <p>Ataque:</p>
-            <p>Daño:</p>
-    
-            
-            <div class="rectangulo">
-                <div class="cantidad">
-                    <p>-</p>
-                    <p>1</p>
-                    <p>+</p>
-                </div>
-                <div class="valor">
-                    <p>$168.000</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    </main>
-    <div class="paginas">
-    <p class="flecha">←</p>
-    <p>1</p>
-    <p>2</p>
-    <p>3</p>
-    <p class="flecha">→</p>
-    </div>
-    <aside class="resumen">
-    <div class="compra">
-        <h2>Resumen de tus deseos</h2>
-        <hr class="lineados">
-    </div>
-    <div class="productos">
-        <p>Productos:</p>
-        
-        
-        <hr class="lineados">
-        
-    </div>
-    <div class="pedido">
-        <button class="realizar" id="checkout"> Ir al carro de compras</button>
-        <p class="añadir">¿Quieres añadir más productos?</p>
-    </div>
-    </aside>
+      </div>
   </main>
+      <!-- Cartas -->
 
+  <!-- ////////////// -->
+    
   
+  
+  <script src="js/hamburguer.js"></script>
+</body>
+</html>
 
-
-
-
-
-
+<!-- CUADRO DE SEGUIR AL CARRO DE COMPRA -->
+<!-- <aside class="resumen">
+<div class="compra">
+    <h2>Resumen de tus deseos</h2>
+    <hr class="lineados">
+</div>
+<div class="productos">
+    <p>Productos:</p>
+    
+    
+    <hr class="lineados">
+    
+</div>
+<div class="pedido">
+    <button class="realizar" id="checkout"> Ir al carro de compras</button>
+    <p class="añadir">¿Quieres añadir más productos?</p>
+</div>
+</aside> -->
 <!-- peticiones de la base de datos para la funcion de eliminar carta -->
-<!--  <div class="card-container">
+  <!-- <div class="card-container">
     
     <ul>
       <% products.forEach(function(product) { %>
@@ -187,8 +140,4 @@
     </ul>
     </ul>
 
-  </div>
-  <script src="js/hamburguer.js"></script>
-</body>
-</html>
--->
+  </div> -->
