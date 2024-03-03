@@ -15,7 +15,7 @@ const constants = require('./config/constants'); // importa el módulo morgan, q
 
 var indexRouter = require('./routes/index'); // importa el enrutador principal (indexRouter) desde el archivo index.js ubicado en el directorio routes.
 
-
+const cors = require('cors');
 
 
 //Nueva instancia para configurar y ejecutar aplicaciones
@@ -30,6 +30,8 @@ app.set('views', path.join(__dirname, 'views')); // direcotorio de vistas
 // configuracion cosas estaticas
 app.use(express.static(path.join(__dirname, 'public'))); //directorio archivos estaticos
 
+//permite conexiones de cualquier url
+app.use(cors());
 
 
 // configuracion middleware de sesiones
@@ -38,6 +40,7 @@ app.use(session({
     saveUninitialized: false, // no crea sesin hasta que algo almacene
     secret: 'shhhh, very secret'
 }));
+
 
 //configaron de middleware adicional para el registro, analisis de JSON, formularios y cookies
 app.use(logger('dev'));
