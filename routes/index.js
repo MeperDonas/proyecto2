@@ -106,7 +106,7 @@ router.post('/lista_deseos/eliminar/:itemid', async function (req, res, next) {
   
   } catch (err) {
   console.log('Entre un error', err);
-  res.json({status : 'error'});
+  res.json({status : 'ok'});
   throw err;
   } finally {
   if (conn) return conn.end();
