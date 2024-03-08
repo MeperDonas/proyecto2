@@ -1,3 +1,5 @@
+require('dotenv').config({ path: './local/.env' }); // Especifica la ruta al archivo .env
+
 var express = require('express'); // importa el modulo express (que es el framework)
 
 var session = require('express-session'); // importa el modulo de sesiones de express (es la gestion de sesioens de express)
@@ -19,8 +21,11 @@ const cors = require('cors');
 
 
 
+
+
 //Nueva instancia para configurar y ejecutar aplicaciones
 var app = express();
+
 
 
 
@@ -58,8 +63,8 @@ app.use(function(req, res, next) {
 });
 
 
-app.listen(constants.PORT, () => {
-  console.log(`Activo el puerto ${constants.PORT}`)
+app.listen(process.env.PORT, () => {
+  console.log(`Activo el puerto ${process.env.PORT}`)
 })
 
 // script para importar
