@@ -18,6 +18,7 @@ var indexRouter = require('./routes/index'); // importa el enrutador principal (
 const cors = require('cors');
 
 
+
 //Nueva instancia para configurar y ejecutar aplicaciones
 var app = express();
 
